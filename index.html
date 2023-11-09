@@ -22,7 +22,7 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            color: #002147;
+            color: #ffffff; /* Make h1 text white */
         }
 
         .blog-post {
@@ -48,6 +48,14 @@
         .blog-post .date {
             color: #aaaaaa;
         }
+
+        .expand-button {
+            background-color: #002147;
+            color: #ffffff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -66,6 +74,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed eget ligula euismod, aliquet nisl id, lacinia lorem.</p>
                     <p class="author">Author: John Doe</p>
                     <p class="date">Published: January 1, 2023</p>
+                    <button class="expand-button" onclick="expandPost(1)">Expand</button>
                 </div>
             </div>
             <div class="col-md-6">
@@ -74,6 +83,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed eget ligula euismod, aliquet nisl id, lacinia lorem.</p>
                     <p class="author">Author: Jane Smith</p>
                     <p class="date">Published: February 1, 2023</p>
+                    <button class="expand-button" onclick="expandPost(2)">Expand</button>
                 </div>
             </div>
         </div>
@@ -82,5 +92,18 @@
     <!-- Bootstrap & jQuery JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function expandPost(postId) {
+            const post = document.querySelector(`.blog-post:nth-child(${postId})`);
+            if (post) {
+                post.style.maxHeight = post.style.maxHeight === "none" ? "initial" : "none";
+            }
+        }
+    </script>
 </body>
 </html>
+
+
+
+
+
