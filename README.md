@@ -1,4 +1,4 @@
-# Blog
+# Retired blog
 
 > [!WARNING]\
 > This blog has been discontinued. For the official [IntrepidBird](https://github.com/intrepidbird) blog, please see [1ntrepidblog](https://artofproblemsolving.com/community/c3616023) on AoPS
